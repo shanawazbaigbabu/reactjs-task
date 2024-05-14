@@ -1,0 +1,29 @@
+// App.js
+import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  const [isConnected, setIsConnected] = useState(false);
+
+  const handleJoinClick = () => {
+    // Logic to connect to the backend and initiate a chat session
+    setIsConnected(true);
+  };
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Omegle Clone</h1>
+      </header>
+      <main>
+        {!isConnected ? (
+          <button onClick={handleJoinClick}>Join Me</button>
+        ) : (
+          <div>Video chat interface goes here</div>
+        )}
+      </main>
+    </div>
+  );
+}
+
+export default App;
